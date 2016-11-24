@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"> 
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!--主要样式-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<!-- 主界面菜单同时移动 -->
+	    <!-- 侧滑导航根容器 -->
+	    <div class="mui-off-canvas-wrap mui-draggable">
+	        <!-- 主页面容器 -->
+	        <div class="mui-inner-wrap">
+	        	<!--悬浮按钮-->
+					    <div class="float-menu" id="menu">
+							<div class="plus"><div class="cross"></div></div>
+							<div class="menu-list">
+								<a href="#" class="link-home" id="publish">发动态</a>
+								<a href="#my" class="link-my">我的</a>
+								<a href="#cart" class="link-cart" id="upphoto">相册</a>
+							</div>
+						</div>
+	            <!-- 菜单容器 -->
+	            <aside class="mui-off-canvas-left" id="offCanvasSide">
+	                <div class="mui-scroll-wrapper">
+	                    <div class="mui-scroll">
+	                        <!-- 菜单具体展示内容 -->
+	                       <ul class="mui-table-view touming">
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;">
+							            <img class="mui-media-object mui-pull-left" src="images/my_tou.png">
+							            <div class="mui-media-body">
+							               	新萌宝宝
+							                <p class='mui-ellipsis'>3岁3月</p> 
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media" id="health">
+							        <a href="javascript:;">
+							            <h4 style="color:#c21f3e">健康提示</h4>
+							            <div class="mui-media-body" >
+							                <p class="canvas_p">宝宝这个时候要注意牙齿保护，牙齿要做好护理，不要过早地接触甜食</p>				
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							            <span class="mui-icon iconfont icon-icon7 canvas_p" ></span><span class="canvas_p">查看全部内容</span>
+							            <!-- 开关关闭状态 -->
+							            <div id="mySwitch" class="mui-pull-right">
+											<div class="mui-switch mui-switch-mini mui-switch-blue">
+											  <div class="mui-switch-handle"></div>
+											</div>
+							            </div>
+							        </a>
+							    </li>
+							     <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;">
+							            <div class="mui-media-body">
+							                <i class="mui-icon iconfont icon-icon16 canvas_p"></i><span class="canvas_p">智能相册</span>		
+							            </div>
+							        </a>
+							    </li>
+							</ul>
+	                    </div>
+	                </div>
+	            </aside>
+	            <!-- 主页面标题 -->
+	            <header class="mui-bar mui-bar-nav">
+	                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+	                <img src="images/my_tou.png" width="40px" height="40px"/>
+	                <h1 class="mui-title">袋鼠兜</h1>
+	                <a class="mui-icon iconfont icon-qiandao mui-pull-right" href="#" id="calender"></a>
+	            </header>
+	            <nav class="mui-bar mui-bar-tab">
+	    		    <a class="mui-tab-item mui-active">
+	    		        <span class="mui-icon iconfont icon-shouye5"></span>
+	    		        <span class="mui-tab-label">圈子</span>
+	    		    </a>
+	    		    <a class="mui-tab-item">
+	    		        <span class="mui-icon iconfont icon-shouye22"></span>
+	    		        <span class="mui-tab-label">发现</span>
+	    		    </a>
+	    		    <a class="mui-tab-item">
+	    		        <span class="mui-icon iconfont icon-shouye8"></span>
+	    		        <span class="mui-tab-label">我的</span>
+	    		    </a>
+	    		</nav>
+	    		
+	    		
+	    		
+	            <!-- 主页面内容容器 -->
+	            <div class="mui-content mui-scroll-wrapper">
+	                <div class="mui-scroll">
+	                    <!-- 主界面具体展示内容 -->
+	                    
+	                    <!-- 轮播图 -->
+	                   <div class="mui-slider">
+						  <div class="mui-slider-group mui-slider-loop">
+						    <!--支持循环，需要重复图片节点-->
+						    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/1.jpg" /></a></div>
+						    <div class="mui-slider-item"><a href="#"><img src="images/1.jpg" /></a></div>
+						    <div class="mui-slider-item"><a href="#"><img src="images/1.jpg" /></a></div>
+						    <div class="mui-slider-item"><a href="#"><img src="images/1.jpg" /></a></div>
+						    <div class="mui-slider-item"><a href="#"><img src="images/1.jpg" /></a></div>
+						    <!--支持循环，需要重复图片节点-->
+						    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/1.jpg" /></a></div>
+						  </div>
+						</div>
+						
+						<!--内容展示-->
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li>
+								<div class="mui-card">
+									<!--页眉，放置标题-->
+									<div class="mui-card-header mui-card-media">
+										<img src="images/my_tou.png" />
+											<div class="mui-media-body">
+												小M
+												<p>发表于 2016-06-30 15:30</p>
+											</div>
+									</div>
+									<!--内容区-->
+									<div class="mui-card-content">
+										<p>记录我的世界，做幸福妈妈!</p>
+										<img src="images/userimg_03.jpg" width="100%"/>
+									</div>
+									<!--页脚，放置补充信息或支持的操作-->
+									<div class="mui-card-footer">
+										<a href="#" class="text"><span class="mui-icon iconfont icon-icon4"></span>转发</a>
+										<a href="#" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+										<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span><span class="num">1</span></a>
+										
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<div class="mui-card">
+									<!--页眉，放置标题-->
+									<div class="mui-card-header mui-card-media">
+										<img src="images/my_tou.png" />
+											<div class="mui-media-body">
+												小M
+												<p>发表于 2016-06-30 15:30</p>
+											</div>
+									</div>
+									<!--内容区-->
+									<div class="mui-card-content">
+										<p>记录我的世界，做幸福妈妈!</p>
+										<a href="#PopoverPicContainer" id="poppicContainer"><img src="images/userimg_03.jpg" width="100%"/></a>
+									</div>
+		
+									<!--页脚，放置补充信息或支持的操作-->
+									<div class="mui-card-footer">
+										<a href="publish.html" class="text" onclick=""><span class="mui-icon iconfont icon-icon4"></span>转发</a>
+										<a href="content.html" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+										<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span></a>
+										
+									</div>
+								</div>
+							</li>
+						</ul>
+						
+	                </div>
+	            </div>
+	       	 <div class="mui-off-canvas-backdrop"></div>
+	        </div>
+	    </div>
+	    
+	<script src="js/mui.min.js"></script>
+	<script src="js/upphoto.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		//openCalender
+		document.getElementById("calender").addEventListener('tap',function(){
+			mui.openWindow({
+				url: "calender.html",
+				id: "calender.html"
+			});
+			
+		})
+		//动态
+		document.getElementById("publish").addEventListener('tap',function(){
+			mui.openWindow({
+				url:"publish.html",
+				id:"publish.html"
+			});
+		})
+		//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+		//区域滚动
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});	
+		//侧边栏开关状态
+		document.getElementById("mySwitch").addEventListener("toggle",function(event){
+		  if(event.detail.isActive){
+		    console.log("你启动了开关");
+		  }else{
+		    console.log("你关闭了开关");  
+		  }
+		})
+		//悬浮按钮
+		 if(document.querySelector(".float-menu")){
+			var plus = document.querySelector(".plus");
+			var floatMenu = document.querySelector(".float-menu");
+			plus.addEventListener("tap", function(){
+				floatMenu.className.indexOf("open") > -1?floatMenu.className = "float-menu":floatMenu.className = "float-menu open";
+			},false);
+		}
+    </script>
+</body>
+</html>
