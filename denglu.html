@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"> 
+</head>
+<body>
+<body>
+	<!-- 主界面菜单同时移动 -->
+	    <!-- 侧滑导航根容器 -->
+	    <div class="mui-off-canvas-wrap mui-draggable" >
+	        <div class="mui-inner-wrap">
+	            <div class="mui-content mui-scroll-wrapper" style="background-image: url(img/bg_12.jpg);width: 100%;">
+	                <div class="mui-scroll" >            	  
+	                     <img class="logo" src="img/logo2.png"/>	           
+	                	<form class="mui-input-group" id="denglu" >
+						    <div class="mui-input-row">
+						        <label>用户名</label>						    
+						    <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+						    </div>
+						    <div class="mui-input-row">
+						        <label>密码</label>
+						        <input type="password" class="mui-input-password" placeholder="请输入密码">
+						    </div>
+						    <div class="mui-button-row">
+						        <button type="button" class="mui-btn mui-btn-primary" >确认</button>
+						        <button type="button" class="mui-btn mui-btn-danger" >取消</button>
+						    </div>
+						</form>					                
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	<script type="text/javascript" charset="utf-8">
+	    mui("#input_example input").each(function() {
+//若当前input为空，则alert提醒 
+			if(!this.value || this.value.trim() == "") {
+			    var label = this.previousElementSibling;
+			    mui.alert(label.innerText + "不允许为空");
+			    check = false;
+			    return false;
+			}
+			}); //校验通过，继续执行业务逻辑 
+			if(check){
+			    mui.alert('验证通过!')
+		}
+    </script>
+</body>
+</html>
