@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"> 
+    <!--主要样式-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<!-- 树洞页面标题 -->
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">树洞</h1>
+	    <a class="mui-icon mui-action-menu mui-icon-plusempty mui-pull-right" href="#offCanvasSide"></a>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item" onclick="openIndex();">
+	    	<span class="mui-icon iconfont icon-shouye5" onclick="openIndex();"></span>
+	    	<span class="mui-tab-label">圈子</span>
+	    </a>
+	    <a class="mui-tab-item mui-active" onclick="openFind();">
+	    	<span class="mui-icon iconfont icon-shouye22"></span>
+	    	<span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item">
+	    	<span class="mui-icon iconfont icon-shouye8"></span>
+	    	<span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+	<!-- 树洞页面内容容器 -->
+	<div class="mui-content mui-scroll-wrapper">
+	    <div class="mui-scroll">
+	    <!-- 树洞界面具体展示内容 -->
+	    	<ul class="mui-table-view mui-table-view-chevron">
+								<li>
+									<div class="mui-card">
+										<!--页眉，放置标题-->
+										<div class="mui-card-header mui-card-media">
+											<img src="images/my_tou.png" />
+												<div class="mui-media-body">
+													小M
+													<p>发表于 2016-06-30 15:30</p>
+												</div>
+										</div>
+										<!--内容区-->
+										<div class="mui-card-content">
+											<p>孩子吐奶怎么办</p>
+											<img src="images/userimg_03.jpg" width="100%"/>
+										</div>
+										<!--页脚，放置补充信息或支持的操作-->
+										<div class="mui-card-footer">
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon4"></span>转发</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span><span class="num">1</span></a>
+											
+										</div>
+									</div>
+								</li>
+								
+								<li>
+									<div class="mui-card">
+										<!--页眉，放置标题-->
+										<div class="mui-card-header mui-card-media">
+											<img src="images/my_tou.png" />
+												<div class="mui-media-body">
+													小C
+													<p>发表于 2016-06-30 15:30</p>
+												</div>
+										</div>
+										<!--内容区-->
+										<div class="mui-card-content">
+											<p>带孩子好累</p>
+											<a href="#PopoverPicContainer" id="poppicContainer">
+												<img src="images/userimg_03.jpg" width="100%"/>
+											</a>
+										</div>
+			
+										<!--页脚，放置补充信息或支持的操作-->
+										<div class="mui-card-footer">
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon4"></span>转发</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span></a>
+											
+										</div>
+									</div>
+								</li>
+							</ul>
+		</div>
+	</div>
+	<div class="mui-off-canvas-backdrop"></div>   
+	<script type="text/javascript" charset="utf-8">
+      	mui.init({});
+      	function openIndex(){
+		    mui.openWindow({
+				url    : 'index.html',
+				id: 'index.html'
+		    });
+		}
+      	function openFind(){
+		    mui.openWindow({
+				url    : 'find.html',
+				id: 'find.html'
+		    });
+		}
+		(function($) {
+			$('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			});
+		})(mui);
+</script>
+</body>
+</html>
