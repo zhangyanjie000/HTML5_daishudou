@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.js"></script>
+    
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"> 
+    
+</head>
+ <style>
+    		#boby{ 
+    			font-family: "微软雅黑";
+    			font-size: 15px;
+    		}
+    </style>
+<body id="boby">
+	<style>
+		.mui-control-content {
+		background-color: white;
+		min-height: 500px;
+		}
+		.mui-control-content .mui-loading {
+		margin-top: 50px;
+		}
+		base
+	</style>
+	<!-- 宝宝辅食页面标题 -->
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+
+	    <h1 class="mui-title">搜索</h1>
+	    
+	</header>
+	
+	<!-- 宝宝辅食页面内容容器 -->
+	<div class="mui-content mui-scroll-wrapper"style="margin:0px ;">
+	    <div class="mui-scroll" >
+	    <!-- 搜索界面具体展示内容 -->
+	    	<div class="mui-input-row mui-search"style="margin-top:10px ;">
+    			<input type="search" class="mui-input-clear" placeholder="搜索"style="background:#eb6c85;color:#a9a9ad;">
+			</div>
+	    	<div style="border:1px ;">
+	    		<p style="margin: 5px;">近日热搜</p>
+	    		<button type="button" class="mui-btn mui-btn-outlined"style="text-align:center;padding:0px; margin:5px;">宝宝吐奶</button>
+	    		<button type="button" class="mui-btn mui-btn-outlined"style="text-align:center;padding:0px;margin:5px;">妈妈减肥好方法</button>
+	    		<button type="button" class="mui-btn mui-btn-outlined"style="text-align:center;padding:0px;margin:5px;">宝贝</button>
+	    		<button type="button" class="mui-btn mui-btn-outlined"style="text-align:center;padding:0px;margin:5px;">宝宝</button>
+	    		<button type="button" class="mui-btn mui-btn-outlined"style="text-align:center;padding:0px;margin:5px;">宝宝吐奶</button>
+	    	</div>
+	    	<div  style="font-family: 微软雅黑">
+	    		<p style="margin: 5px;">我的历史搜索</p>
+	    		<ul class="mui-table-view" >
+				    <li class="mui-table-view-cell">我要减肥</li>
+				    <li class="mui-table-view-cell">尿不湿</li>
+				    <li class="mui-table-view-cell">和宝宝小情绪</li>
+				    <li class="mui-table-view-cell">我要减肥</li>
+				    <li class="mui-table-view-cell">尿不湿</li>
+				    <li class="mui-table-view-cell">和宝宝小情绪</li>
+				    <li class="mui-table-view-cell">我要减肥</li>
+				    <li class="mui-table-view-cell">尿不湿</li>
+				    <li class="mui-table-view-cell">和宝宝小情绪</li>
+				    <li class="mui-table-view-cell">我要减肥</li>
+				    <li class="mui-table-view-cell">尿不湿</li>
+				    <li class="mui-table-view-cell">和宝宝小情绪</li>
+				</ul>
+				</div>
+			<div style="text-align: center;margin-top:10px ;">
+				<button type="button" class="mui-btn mui-btn-outlined"style="text-align:center ;" onclick="callback2();"><span class="mui-icon mui-icon-trash"></span>清除所有历史搜索</button>
+	    	</div>
+	    	
+	    	
+		</div>
+	</div>
+	<div class="mui-off-canvas-backdrop"></div>   
+	<script type="text/javascript" charset="utf-8">
+      	mui.init({
+      		
+			swipeBack: false
+			
+		});
+		(function($) {
+			$('.mui-scroll-wrapper').scroll({
+				indicators: false,
+      		     bounce: true,
+      		    scrollY: true, //是否竖向滚动
+ 				scrollX:true//是否横向滚动
+			});
+			<!--根据选择获取各个面板-->
+			/*var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';*/
+			var html2 = '';
+			var item2 = document.getElementById('item2mobile');
+			document.getElementById('slider').addEventListener('slide', function(e) {
+				if (e.detail.slideNumber === 1) {
+					if (item2.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item2.querySelector('.mui-scroll').innerHTML = html2;
+						}, 500);
+					}
+				}
+			});
+		})(mui);
+		
+		HCMUI_AnimateMsg('.HUI_AnimateMsg', 5,1000);
+		
+		
+		function callback2(){ 
+      		var btnArray = ['确认', '取消'];
+    mui.confirm('确认保存', '', btnArray, function(e) 
+    {
+    	 if (e.index == 0) {
+                       mui.toast("已删除");
+                    } else {
+                        
+                    }
+       
+    })
+      	}
+</script>
+</body>
+</html>
