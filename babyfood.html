@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.js"></script>
+    
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"> 
+    <style>
+    		#boby{ font-family: "微软雅黑";}
+    </style>
+</head>
+<body id="boby">
+	<style>
+		.mui-control-content {
+		background-color: white;
+		min-height: 500px;
+		}
+		.mui-control-content .mui-loading {
+		margin-top: 50px;
+		}
+	</style>
+	<!-- 宝宝辅食页面标题 -->
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+
+	    <h1 class="mui-title">宝宝辅食</h1>
+	    <a class="mui-icon mui-action-menu mui-icon-search mui-pull-right" href="#offCanvasSide" onclick="openSearchWindow()"></a>
+	</header>
+	javascript:;<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item">
+	    	<span class="mui-icon iconfont icon-shouye5"></span>
+	    	<span class="mui-tab-label">圈子</span>
+	    </a>
+	    <a class="mui-tab-item mui-active">
+	    	<span class="mui-icon iconfont icon-shouye22"></span>
+	    	<span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item">
+	    	<span class="mui-icon iconfont icon-shouye8"></span>
+	    	<span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+	<!-- 宝宝辅食页面内容容器 -->
+	<div class="mui-content mui-scroll-wrapper"style="margin:0px ;">
+	    <div class="mui-scroll" >
+	    <!-- 宝宝辅食界面具体展示内容 -->
+	    	<!--可滑动选项卡-->
+	    	<div id="sliderSegmentedControl" class="mui-segmented-control mui-segmented-control-inverted">
+				<a class="mui-control-item" href="#item1mobile">热点推广</a>
+				<a class="mui-control-item" href="#item2mobile">讨论区</a>
+			</div>
+			<!--可滑动选项卡内容-->
+			<div class="mui-slider-group" >
+				<!--宝宝辅食热点推送内容-->
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper"style="margin:0px ;">
+						<div class="mui-scroll">
+							<ul class="mui-table-view mui-table-view-chevron">
+								<li>
+									<div class="mui-card">
+										<!--页眉，放置标题-->
+										<div class="mui-card-header mui-card-media">
+											<img src="images/2.jpg" />
+												<div class="mui-media-body">
+													宝宝妈
+													<p>一句话：慢慢的生活，细细体味</p>
+												</div>
+										</div>
+										<!--内容区-->
+										<div class="mui-card-content">
+											<ul class="mui-table-view" >
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined"style="padding:0px;float: left;">置顶</button>
+												        	<p class='mui-ellipsis'>实施计划，宝宝辅食</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;"class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-success mui-btn-outlined"style="padding:0px;float: left;">推广</button>
+												        	<p class='mui-ellipsis'>今日话题：得知二胎，如何和一胎处理好关系</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn  mui-btn-royal mui-btn-outlined"style="padding:0px;float: left;">问题</button>
+												        	<p class='mui-ellipsis'>今日热点：孩子吐奶，怎么处理？</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<!--页脚，放置补充信息或支持的操作-->
+										<div class="mui-card-footer">
+											<a href="#" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span><span class="num">1</span></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="mui-card">
+										<!--页眉，放置标题-->
+										<div class="mui-card-header mui-card-media">
+											<img src="images/2.jpg" />
+												<div class="mui-media-body">
+													宝宝妈
+													<p>一句话：慢慢的生活，细细体味</p>
+												</div>
+										</div>
+										<!--内容区-->
+										<div class="mui-card-content">
+											<ul class="mui-table-view" >
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined"style="padding:0px;float: left;">置顶</button>
+												        	<p class='mui-ellipsis'>实施计划，宝宝辅食</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-success mui-btn-outlined"style="padding:0px;float: left;">推广</button>
+												        	<p class='mui-ellipsis'>今日话题：得知二胎，如何和一胎处理好关系</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn  mui-btn-royal mui-btn-outlined"style="padding:0px;float: left;">问题</button>
+												        	<p class='mui-ellipsis'>今日热点：孩子吐奶，怎么处理？</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<!--页脚，放置补充信息或支持的操作-->
+										<div class="mui-card-footer">
+											<a href="#" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span><span class="num">1</span></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="mui-card">
+										<!--页眉，放置标题-->
+										<div class="mui-card-header mui-card-media">
+											<img src="images/2.jpg" />
+												<div class="mui-media-body">
+													宝宝妈
+													<p>一句话：慢慢的生活，细细体味</p>
+												</div>
+										</div>
+										<!--内容区-->
+										<div class="mui-card-content">
+											<ul class="mui-table-view" >
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined"style="padding:0px;float: left;">置顶</button>
+												        	<p class='mui-ellipsis'>实施计划，宝宝辅食</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;"class="mui-navigate-right"onclick="openarticleWindow();" >
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-success mui-btn-outlined"style="padding:0px;float: left;">推广</button>
+												        	<p class='mui-ellipsis'>今日话题：得知二胎，如何和一胎处理好关系</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn  mui-btn-royal mui-btn-outlined"style="padding:0px;float: left;">问题</button>
+												        	<p class='mui-ellipsis'>今日热点：孩子吐奶，怎么处理？</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<!--页脚，放置补充信息或支持的操作-->
+										<div class="mui-card-footer">
+											<a href="#" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span><span class="num">1</span></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="mui-card">
+										<!--页眉，放置标题-->
+										<div class="mui-card-header mui-card-media">
+											<img src="images/2.jpg" />
+												<div class="mui-media-body">
+													宝宝妈
+													<p>一句话：慢慢的生活，细细体味</p>
+												</div>
+										</div>
+										<!--内容区-->
+										<div class="mui-card-content">
+											<ul class="mui-table-view" >
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined"style="padding:0px;float: left;">置顶</button>
+												        	<p class='mui-ellipsis'>实施计划，宝宝辅食</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;"class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn mui-btn-success mui-btn-outlined"style="padding:0px;float: left;">推广</button>
+												        	<p class='mui-ellipsis'>今日话题：得知二胎，如何和一胎处理好关系</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<div class="mui-card-content">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-media">
+												    <a href="javascript:;" class="mui-navigate-right" onclick="openarticleWindow();">
+												      	<div class="mui-media-body">
+												      		<button type="button" class="mui-btn  mui-btn-royal mui-btn-outlined"style="padding:0px;float: left;">问题</button>
+												        	<p class='mui-ellipsis'>今日热点：孩子吐奶，怎么处理？</p>
+
+												      	</div>
+												    </a>
+												</li>
+  											</ul>
+										</div>
+										<!--页脚，放置补充信息或支持的操作-->
+										<div class="mui-card-footer">
+											<a href="#" class="text"><span class="mui-icon iconfont icon-shouye23"></span>评论</a>
+											<a href="#" class="text"><span class="mui-icon iconfont icon-icon6"></span><span class="num">1</span></a>
+										</div>
+									</div>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content ">
+					<div id="scroll1" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							    <li class="mui-table-view-cell mui-media">
+							        <a href="javascript:;" onclick="openarticleWindow();">
+							            <img class="mui-media-object mui-pull-right" src="images/my_zhaojiling.png">
+							            <div class="mui-media-body">
+							                支招 | 营养早餐， 宝宝辅食
+							                <p class='mui-ellipsis'>宝宝妈 2016-10-3</p>
+							            </div>
+							        </a>
+							    </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--宝宝辅食社区交流内容-->				
+			</div>
+			
+		</div>
+	</div>
+	<div class="mui-off-canvas-backdrop"></div>   
+	<script type="text/javascript" charset="utf-8">
+      	mui.init({
+      		
+			swipeBack: false
+			
+		});
+		(function($) {
+			$('.mui-scroll-wrapper').scroll({
+				indicators: false,
+      		     bounce: true
+			});
+			<!--根据选择获取各个面板-->
+			/*var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';*/
+			var html2 = '';
+			var item2 = document.getElementById('item2mobile');
+			document.getElementById('slider').addEventListener('slide', function(e) {
+				if (e.detail.slideNumber === 1) {
+					if (item2.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item2.querySelector('.mui-scroll').innerHTML = html2;
+						}, 500);
+					}
+				}
+			});
+		})(mui);
+		
+		HCMUI_AnimateMsg('.HUI_AnimateMsg', 5,1000);
+		
+		function openarticleWindow(){
+    mui.openWindow({
+	url    : 'article.html',
+	id: 'article.html'
+    });
+}
+			function openSearchWindow(){
+    mui.openWindow({
+	url    : 'search.html',
+	id: 'search.html'
+    });
+}
+			
+			
+		
+		
+</script>
+</body>
+</html>
