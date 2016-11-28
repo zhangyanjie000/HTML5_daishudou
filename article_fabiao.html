@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.js"></script>
+    
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"> 
+</head>
+<body>
+	<!-- 主界面菜单同时移动 -->
+	    <!-- 侧滑导航根容器 -->
+	    <div class="mui-off-canvas-wrap mui-draggable">
+	        <!-- 主页面容器 -->
+	        <div class="mui-inner-wrap">
+	            <!-- 菜单容器 -->
+	           
+	            <!-- 主页面标题 -->
+	            <header class="mui-bar mui-bar-nav">
+	                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	                <h1 class="mui-title">文章发表</h1>
+	            </header>
+	           
+	            <!-- 主页面内容容器 -->
+	            <div class="mui-content mui-scroll-wrapper">
+	                <div class="mui-scroll">
+	                    <!-- 主界面具体展示内容 -->
+	                    <div class="actcle1"style="text-align:center;padding-top:5px;">
+	                    	<img src="images/my_zhaojiling.png"style="width:100px;height:100px;">
+	                    </div>
+	                    <div class="actcle2" style="text-align:center;padding-bottom: 5px;">
+	                    	<button type="button" class="mui-btn" >我要上传图片</button>
+	                    	
+	                    </div>
+	                    <form class="mui-input-group">
+						    <div class="mui-input-row">
+						        <label>输入标题：</label>
+						    <input type="text" class="mui-input-clear" placeholder="请输入文章标题">
+						    </div>
+						    <div class="mui-input-row" style="height:300px;">
+						        <label for="textarea" style="padding-top:40px ;">输入内容：</label>
+						    	<textarea cols="40" rows="" style="height:100%;"  name="textarea" id="textarea"  placeholder="详细内容">
+						    	</textarea>
+						    </div>
+						    
+						</form>
+	                   		<div class="mui-button-row" style="margin-top: 20px;">
+						        <button type="button" class="mui-btn mui-btn-primary"  onclick="callback1();">取消</button>
+						        <button type="button" class="mui-btn mui-btn-danger" onclick="callback2();">发布</button>
+						    </div>
+						    
+	            </div>
+	       	 <div class="mui-off-canvas-backdrop"></div>
+	        </div>
+	    </div>
+	
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	//蒙版
+        /*function showMask(){ 
+      		var mask=mui.createMask(callback1);
+      		mask.show();
+      	}*/
+      	//点击页面
+      	function callback1(){ 
+      		var btnArray = ['确认', '取消'];
+    mui.confirm('确认取消', '', btnArray, function(e) 
+    {
+       
+    })
+      	}
+      	function callback2(){ 
+      		var btnArray = ['确认', '取消'];
+    mui.confirm('确认保存', '', btnArray, function(e) 
+    {
+        if (e.index == 0) {
+            mui.toast("您已赚取2个豆豆");
+        } else {
+                        
+        }
+
+    })
+      	}
+      	(function($) {
+			$('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			});
+		})(mui);
+      	
+    </script>
+</body>
+</html>
