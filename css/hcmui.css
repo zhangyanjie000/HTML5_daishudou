@@ -1,0 +1,164 @@
+/*
+ * HC-MUI 做移动端最轻最好的UI框架
+ * 版本 : v1.01 Beta
+ * 框架获取地址 : http://www.hcoder.net/mui
+ * 框架作者        : 刘海君  5213606@qq.com
+*/
+@charset "utf-8";
+*{margin:0; padding:0; font-size:14px; color:#000000; outline:none;}
+div{overflow:hidden; margin:0 auto;}
+a{color:#000000; text-decoration:none;}
+ul{list-style-type:none;}
+.HUI_FL{float:left !important;}
+.HUI_FR{float:right !important;}
+.HUI_Wrap{width:100%;}
+.HUI_ClearBorder{border:none !important;}
+.HUI_BorderRadius{border-radius:5px !important;}
+.HUI_Text{line-height:2em;}
+.HUI_CPadding{padding:10px;}
+.HUI_Cancel{background:#E1E1E1 !important; color:#A3A3A3 !important;}
+.HUI_CPB{padding-bottom:10px !important;}
+.HUI_CENTER{margin:0px !important; top:50% !important; left:50% !important; -webkit-transform:translate(-50%,-50%) !important; -moz-transform:translate(-50%,-50%) !important; transform:translate(-50%,-50%) !important;}
+/* 头部导航 默认高度 45px  */
+.HUI_Header{width:100%; height:45px; line-height:45px; background:#303538;}
+.HUI_HeaderFixed{position:fixed !important; z-index:1; left:0px; top:0px;}
+/* 头部导航内区块用于放置头部元素(如 logo 菜单等) 默认高度 45px 左浮动 */
+.HUI_HeaderBlock{display:block !important; line-height:45px; float:left;}
+/* 多功能菜单 */
+.HUI_Menu{width:45px; height:45px; float:right; background:url(hcmuiimgs/icon_menu.png) no-repeat center center; background-size:100% 100%; cursor:pointer; border-top-left-radius:20px;}
+.HUI_MenuItems{width:32%; padding:0px 15px; position:fixed; z-index:999; top:45px; right:0px; margin:0px; display:none;}
+.HUI_MenuItems *{color:#FFFFFF; text-align:center;}
+.HUI_MenuItemsFun{width:100%;}
+.HUI_MenuItemsFun li{width:100%; height:40px; padding:5px 0px;}
+.HUI_MenuItemsFun li a{display:block; width:100%; height:40px; line-height:40px; overflow:hidden;}
+/* 普通列表 */
+.HUI_List{padding:0px 10px;}
+.HUI_List li{padding:10px 0px; border-bottom:1px dashed #D1D1D1; overflow:hidden; background:#FFFFFF;}
+.HUI_List_left{width:23%; float:left;}
+.HUI_List_left img{width:100%; border-radius:1px;}
+.HUI_List_right{width:72%; float:left; padding-left:3%;}
+.HUI_List_right h2{font-size:15px; padding-bottom:3px; font-weight:400;}
+.HUI_List_right p{line-height:1.8em; color:#303538; font-size:12px;}
+/* 列表1 */
+.HUI_List1{padding:0px;}
+.HUI_List1 li{width:33.3%; overflow:hidden; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; padding:0px 0.2em; float:left; margin:10px 0px; background:#FFFFFF;}
+.HUI_List1Img img{width:100% !important; border:1px solid #E1E1E1; border-bottom:0px;}
+.HUI_List1Title{height:28px; line-height:28px; text-overflow: ellipsis; border:1px solid #E1E1E1; border-top:0px; font-size:12px; padding:0px 5px; text-align:center;}
+/* 常用按钮 */
+.HUI_Button{width:100%; height:40px; line-height:40px; text-align:center; color:#FFFFFF; display:block; border:0px; margin:0 auto; background:#0099CC; font-size:16px;}
+.HUI_ToTopButtons{width:100%; position:fixed; left:0px; bottom:18px; z-index:9; animation:TTB_S 1.2s infinite ease-in-out; -webkit-animation:TTB_S 1.2s infinite ease-in-out; -moz-animation:TTB_S 1.2s infinite ease-in-out;}
+@keyframes TTB_S{0%,100%{opacity:1;} 50%{opacity:0;}}
+@-webkit-keyframes TTB_S{0%,100%{opacity:1;} 50%{opacity:0;}}
+@-moz-keyframes TTB_S{0%,100%{opacity:1;} 50%{opacity:0;}}
+.HUI_ToTopButtonsIn{width:16%;}
+.HUI_ToTopButtonsIn img{width:100%;}
+/* 文本框 */
+.HUI_Inputs{width:100%; border:none; border-bottom:1px solid #E1E1E1; height:38px; line-height:38px;}
+.HUI_TextArea{width:98%; border:none; border-bottom:1px solid #E1E1E1; height:88px; line-height:1.6em;}
+/* 单选按钮 */
+.HUI_Radois{}
+.HUI_Radois li{margin:10px 0px; overflow:hidden;}
+.HUI_Radois li input{display:none;}
+.HUI_Radois label{display:block; background:url(hcmuiimgs/icon_radios.png) no-repeat left top; line-height:25px; padding-left:30px; background-size:20px 20px;}
+.HUI_Radois li input:checked + label{background:url(hcmuiimgs/icon_radiosSed.png) no-repeat left top; background-size:20px 20px;}
+/* 复选框 */
+.HUI_CheckBox{}
+.HUI_CheckBox li{margin:10px 0px; overflow:hidden;}
+.HUI_CheckBox li input{display:none;}
+.HUI_CheckBox label{display:block; background:url(hcmuiimgs/icon_cBox.png) no-repeat left top; line-height:25px; padding-left:30px; background-size:20px 20px;}
+.HUI_CheckBox li input:checked + label{background:url(hcmuiimgs/icon_cBoxSed.png) no-repeat left top; background-size:20px 20px;}
+/* 下拉菜单 */
+.HUI_SelectMenu{width:200px; height:35px; line-height:35px; border:1px solid #E1E1E1; float:left; padding:0px 10px; cursor:pointer; background:url(hcmuiimgs/icon_select.png) no-repeat right center; background-size:25px 25px;}
+.HUI_SelectMenuSon{width:200px; height:300px; border:1px solid #E1E1E1; padding:10px; position:absolute; z-index:1; left:0; top:0; background:#FFFFFF; overflow-y:auto; display:none;}
+.HUI_SelectMenuSon *{padding:0; margin:0;}
+.HUI_SelectMenuSon ul{list-style-type:none;}
+.HUI_SelectMenuSon li{height:35px; line-height:35px; cursor:pointer;}
+/* 对话框 弹出层 */
+#HUI_Mask{position:fixed; z-index:99998; width:100%; height:100%; top:0; left:0; background:rgba(0, 0, 0, 0.5); margin:0px;}
+#HUI_Dialog{position:absolute; z-index:99999; width:72%; padding:0px 4%; padding-bottom:10px; top:40%; left:10%; background-color:#FAFAFC; border-radius:5px; margin:0px;}
+#HUI_DialogT{width:100%; height:44px; line-height:44px; font-size:15px; background:url(hcmuiimgs/icon_close.png) no-repeat top right; background-size:12px auto;}
+#HUI_DialogMsg{width:100%; line-height:1.8em; font-size:14px; color:#565656; padding-bottom:15px;}
+#HUI_DialogBut{width:100%; height:40px; line-height:40px; text-align:center; font-size:15px; color:#0099CC; border-top:1px dashed #E1E1E1; cursor:pointer;}
+#HUI_DialogButL{width:49%; height:40px; line-height:40px; text-align:center; font-size:15px; color:#666666; float:left; border-right:1px solid #E1E1E1; cursor:pointer;}
+#HUI_DialogButR{width:49%; height:40px; line-height:40px; text-align:center; font-size:15px; color:#0099CC; float:right; cursor:pointer;}
+#HUI_AutoMsg{position:fixed; z-index:99998; width:100%; height:auto; left:0; bottom:25px;  margin:0px;}
+#HUI_AutoMsgIn{width:58%; background:rgba(0, 0, 0, 0.8); border-radius:3px; height:38px; line-height:38px; color:#FFFFFF; text-align:center; font-size:14px;}
+/* loading */
+#HUI_Loaing{position:fixed; z-index:99999; top:35%; left:0; width:100%;}
+#HUI_LoadingIn{width:128px; height:118px; padding:15px; background:#FFFFFF; border-radius:5px;}
+#HUI_Spinner{width:72px; padding-top:28px;}
+#HUI_Spinner > div {width:20px; height:20px; margin:2px; background-color:#0099CC; border-radius:100%; display:inline-block; -webkit-animation:bouncedelay 1.4s infinite ease-in-out; -moz-animation:bouncedelay 1.4s infinite ease-in-out; animation:bouncedelay 1.4s infinite ease-in-out; -moz-animation-fill-mode:both; -webkit-animation-fill-mode:both; animation-fill-mode:both; }
+#HUI_Spinner .bounce1{animation-delay:-0.32s; -webkit-animation-delay:-0.32s; -moz-animation-delay:-0.32s;}
+#HUI_Spinner .bounce2{animation-delay:-0.16s; -webkit-animation-delay:-0.16s; -moz-animation-delay:-0.16s;}
+@-webkit-keyframes bouncedelay{0%, 80%, 100% {-webkit-transform:scale(0.0)} 40%{-webkit-transform: scale(1.0)}}
+@keyframes bouncedelay{0%, 80%, 100% {transform:scale(0.0);} 40% {transform:scale(1.0);}}
+@-moz-keyframes bouncedelay{0%, 80%, 100% {-moz-transform:scale(0.0);} 40% {-moz-transform:scale(1.0);}}
+#HUI_LoadingMsg{padding-top:40px; text-align:center; font-size:13px; color:#666666;}
+/* 动画部分 */
+/* 从上淡入 */
+.HUI_FadeInFT{animation:fadeinFT 0.6s; -moz-animation:fadeinFT 0.6s; -webkit-animation:fadeinFT 0.6s;}
+@-webkit-keyframes fadeinFT{0%{opacity:0; -webkit-transform:translateY(-50px)} 100%{opacity:1;-webkit-transform:translateY(0)}}
+@-moz-keyframes fadeinFT{0%{opacity:0; -moz-transform:translateY(-50px)} 100%{opacity:1;-moz-transform:translateY(0)}}
+@keyframes fadeinFT{0%{opacity:0; transform:translateY(-50px)} 100%{opacity:1; transform:translateY(0)}}
+/* 从下淡入 */
+.HUI_FadeInFB{animation:fadeinFB 0.6s; -moz-animation:fadeinFB 0.6s; -webkit-animation:fadeinFB 0.6s;}
+@-webkit-keyframes fadeinFB{ 0%{opacity:0; -webkit-transform:translateY(100px)} 100%{opacity:1;-webkit-transform:translateY(0)}}
+@-moz-keyframes fadeinFB{0%{opacity:0; -moz-transform:translateY(100px)} 100%{opacity:1;-moz-transform:translateY(0)}}
+@keyframes fadeinFB{0%{opacity:0; transform:translateY(100px)} 100%{opacity:1; transform:translateY(0)}}
+/* 从左淡入 */
+.HUI_FadeInFL{animation:fadeinFL 0.6s; -moz-animation:fadeinFL 0.6s; -webkit-animation:fadeinFL 0.6s;}
+@-webkit-keyframes fadeinFL{ 0%{opacity:0; -webkit-transform:translateX(-300px)} 100%{opacity:1;-webkit-transform:translateX(0)}}
+@-moz-keyframes fadeinFL{0%{opacity:0; -moz-transform:translateX(-300px)} 100%{opacity:1;-moz-transform:translateY(0)}}
+@keyframes fadeinFL{0%{opacity:0; transform:translateX(-300px)} 100%{opacity:1; transform:translateX(0)}}
+/* 从右淡入 */
+.HUI_FadeInFR{animation:fadeinFL 0.6s; -moz-animation:fadeinFR 0.6s; -webkit-animation:fadeinFR 0.6s;}
+@-webkit-keyframes fadeinFR{ 0%{opacity:0; -webkit-transform:translateX(300px)} 100%{opacity:1;-webkit-transform:translateX(0)}}
+@-moz-keyframes fadeinFR{0%{opacity:0; -moz-transform:translateX(300px)} 100%{opacity:1;-moz-transform:translateY(0)}}
+@keyframes fadeinFR{0%{opacity:0; transform:translateX(300px)} 100%{opacity:1; transform:translateX(0)}}
+/* 上下抖动 */
+.HUI_BounceTB{animation:BounceTB 0.6s; -moz-animation:BounceTB 0.6s; -webkit-animation:BounceTB 0.6s;}
+@-webkit-keyframes BounceTB{0%,20%,50%,80%,100% {-webkit-transform:translateY(0)} 40%{-webkit-transform:translateY(-38px)} 60%{-webkit-transform:translateY(-20px)}}
+@-moz-keyframes BounceTB{0%,20%,50%,80%,100% {-moz-transform:translateY(0)} 40%{-moz-transform:translateY(-38px)} 60%{-moz-transform:translateY(-20px)}}
+@keyframes BounceTB{0%,20%,50%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-38px)} 60%{transform:translateY(-20px)}}
+/* 左右抖动 */
+.HUI_BounceLR{animation:BounceLR 0.6s; -moz-animation:BounceLR 0.6s; -webkit-animation:BounceLR 0.6s;}
+@-webkit-keyframes BounceLR{0%,20%,50%,80%,100% {-webkit-transform:translateX(0)} 40%{-webkit-transform:translateX(-35px)} 60%{-webkit-transform:translateX(-20px)}}
+@-moz-keyframes BounceLR{0%,20%,50%,80%,100% {-moz-transform:translateX(0)} 40%{-moz-transform:translateX(-35px)} 60%{-moz-transform:translateX(-20px)}}
+@keyframes BounceLR{0%,20%,50%,80%,100%{transform:translateX(0)} 40%{transform:translateX(-35px)} 60%{transform:translateX(-20px)}}
+/* 旋转动画 */
+.HUI_RotateIn{animation:RotateIn 0.6s; -moz-animation:RotateIn 0.6s; -webkit-animation:RotateIn 0.6s;}
+@-webkit-keyframes RotateIn{0%{opacity:0; -webkit-transform:rotate(-200deg)} 100%{opacity:1;-webkit-transform:rotate(0)}}
+@-moz-keyframes RotateIn{0%{opacity:0;-moz-transform:rotate(-200deg)} 100%{opacity:1;-moz-transform:rotate(0)}}
+@keyframes RotateIn{0%{opacity:0;transform:rotate(-200deg)} 100%{opacity:1;transform:rotate(0)}}
+/* 翻转动画 */
+.HUI_Flip{animation:FlipY 0.6s; -moz-animation:FlipY 0.6s; -webkit-animation:FlipY 0.6s;}
+@-webkit-keyframes FlipY{0%{-webkit-transform:perspective(300px) rotateY(90deg)} 40%{-webkit-transform:perspective(300px) rotateY(-10deg)} 70%{-webkit-transform:perspective(300px) rotateY(10deg)} 100%{-webkit-transform:perspective(300px) rotateY(0);}}
+@-moz-keyframes FlipY{0%{-moz-transform:perspective(300px) rotateY(90deg)} 40%{-moz-transform:perspective(300px) rotateY(-10deg)} 70%{-moz-transform:perspective(300px) rotateY(10deg)} 100%{-moz-transform:perspective(300px) rotateY(0)}}
+@keyframes FlipY{0%{transform:perspective(300px) rotateY(90deg)} 40%{transform:perspective(300px) rotateY(-10deg)} 70%{transform:perspective(300px) rotateY(10deg)} 100%{transform:perspective(300px) rotateY(0)}}
+/* 进度条 */
+.HUI_Progress{height:16px; background:#EBEBEB; border-radius:16px; width:100%;}
+.HUI_Progress span{display:block; float:left; height:16px; line-height:16px; text-align:right; border-radius:10px; background:url(hcmuiimgs/progress.png) #0099CC; color:#FFFFFF; font-size:10px; padding-right:15px;}
+/* 圆形进度条 */
+.HUI_CircleProgress{width:180px; height:180px; margin:50px auto; position:relative;}
+.HUI_CircleProgress div{background:transparent !important;}
+.HUI_CircleProgressBg{width:150px; height:150px; border:15px solid #EBEBEB; position:absolute; left:0px; top:0px; border-radius:50%; line-height:160px; text-align:center; font-size:38px; color:#0099CC;}
+.HUI_CircleProgressWrapper{width:90px; height:180px; position:absolute; top:0px;}
+.HUI_CircleProgressL{left:0px;} .HUI_CircleProgressR{right:0px;}
+.HUI_CircleProgressM{width:150px; height:150px; border:15px solid transparent; position:absolute; border-radius:50%;}
+.HUI_CircleProgress .rightCircle{border-top:15px solid #0099CC; border-right:15px solid #0099CC; right:0;  transform:rotate(225deg); -webkit-transform:rotate(225deg); -moz-transform:rotate(225deg); -ms-transform:rotate(225deg);}
+.HUI_CircleProgress .leftCircle{border-bottom:15px solid #0099CC; border-left:15px solid #0099CC; left:0;  transform:rotate(225deg); -webkit-transform:rotate(225deg); -moz-transform:rotate(225deg); -ms-transform:rotate(225deg);}
+/* 幻灯片动画 */
+.HUI_Slider{width:100%; overflow:hidden; position:relative;}
+.HUI_Slider ul{width:5000px; display:block; float:left;}
+.HUI_Slider ul li{float:left; font-size:0px; display:none;}
+.HUI_SliderPoint{width:100%; position:absolute; left:0px; bottom:0px; z-index:2; height:22px;}
+.HUI_SliderPointIn{width:58px;}
+.HUI_SliderPoints{width:12px; height:12px; border-radius:50%; background:#FFFFFF; float:left; margin:0px 3px; cursor:pointer;}
+.HUI_SliderPointSed{background:#0099CC !important;}
+/* 整屏切换 */
+.HUI_FullPage{width:100%; height:100%;}
+.HUI_FullPage li{width:100%; height:100%; overflow:hidden;}
+/* 上下滚动的信息  */
+.HUI_AnimateMsg{}
+.HUI_AnimateMsg li{height:38px; line-height:38px; overflow:hidden;}
+
