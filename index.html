@@ -21,7 +21,7 @@
 					    <div class="float-menu" id="menu">
 							<div class="plus"><div class="cross"></div></div>
 							<div class="menu-list">
-								<a href="#" class="link-home" id="publish">发动态</a>
+								<a href="#publish" class="link-home" id="publish">发动态</a>
 								<a href="#my" class="link-my">我的</a>
 								<a href="#cart" class="link-cart" id="upphoto">相册</a>
 							</div>
@@ -172,7 +172,7 @@
 	       	 <div class="mui-off-canvas-backdrop"></div>
 	        </div>
 	    </div>
-	    
+	<script src="js/jquery-2.2.3.min.js"></script>
 	<script src="js/mui.min.js"></script>
 	<script src="js/upphoto.js"></script>
 	<script type="text/javascript" charset="utf-8">
@@ -217,6 +217,39 @@
 				floatMenu.className.indexOf("open") > -1?floatMenu.className = "float-menu":floatMenu.className = "float-menu open";
 			},false);
 		}
+		//拖拽悬浮按钮
+			// 获取节点
+		  	var block = document.getElementById("menu");
+		  	var oW,oH;
+			  // 绑定touchstart事件
+			block.addEventListener("touchstart", function(e) {
+		   	console.log(e);
+		  	var touches = e.touches[0];
+		   	oW = touches.clientX - block.offsetLeft;
+		   	oH = touches.clientY - block.offsetTop;
+		   	//阻止页面的滑动默认事件
+		   	document.addEventListener("touchmove",defaultEvent,false);
+		  	},false)
+		 
+		  	block.addEventListener("touchmove", function(e) {
+		   	var touches = e.touches[0];
+		   	var oLeft = touches.clientX - oW;
+		   	var oTop = touches.clientY - oH;
+		   	if(oLeft < 0) {
+		    	oLeft = 0;
+		   	}else if(oLeft > document.documentElement.clientWidth - block.offsetWidth) {
+		    	oLeft = (document.documentElement.clientWidth - block.offsetWidth);
+		   	}
+		   	block.style.left = oLeft + "px";
+		   	block.style.top = oTop + "px";
+		  	},false);
+		   
+		  	block.addEventListener("touchend",function() {
+		   		document.removeEventListener("touchmove",defaultEvent,false);
+		  	},false);
+		  	function defaultEvent(e) {
+		   		e.preventDefault();
+		  	}
     </script>
 </body>
 </html>

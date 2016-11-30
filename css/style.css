@@ -10,5 +10,5 @@
 .float-menu .menu-list a.link-cart{left: 50%;bottom: 0;-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0);background: url(../images/icon-camera.png) no-repeat center top;background-size: 50%;}
 .float-menu.open .menu-list a{opacity: 1;font-size: 12px;}
 .float-menu.open .cross{-webkit-transform:rotate(135deg);-moz-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);border-radius: 100%;}
-.float-menu.open .menu-list{opacity: 1;width:300%;height: 300%;left: -100%;top: -100%;background-color: rgba(234,172,183,.7);}
+.float-menu.open .menu-list{opacity: 1;width:300%;height: 300%;left: -100%;top: -100%;background-color: rgba(234,172,183,.5);}
 .float-menu #float-cart{background-color: #f97157;border-radius: 100%;display: block;position: absolute;right: 5px;top: 0;color: #fff;min-width: 18px;min-height: 18px;line-height: 18px;text-align: center;}

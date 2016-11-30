@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/iconfont.css"> 
     
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!--qqface-->
+    <link rel="stylesheet" type="text/css" href="css/face.css" />
     <!--主要样式-->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<style type="text/css">
@@ -33,7 +35,7 @@
 	    		   	<div class="mui-row">
 				        <div class="mui-col-sm-4 mui-col-xs-4">
 				            <li class="mui-table-view-cell">
-				                <a class="mui-icon iconfont icon-smile mui-text-center"></a>
+				                <a href="javascript:void(0);" class="mui-icon iconfont icon-smile mui-text-center imgBtn"></a>
 				            </li>
 				        </div>
 				        <div class="mui-col-sm-4 mui-col-xs-4 ">
@@ -56,14 +58,22 @@
 	                <div class="mui-scroll">
 	                    <!-- 主界面具体展示内容 -->
 	                    <!--文本域-->
-	                   <form id="input_text">
+	                   <!--<form id="input_text">
 						    <div>
 						        <label class="mui-hidden">文本域</label>
-						    	<textarea id="text" class="mui-input-clear mui-input-speech" placeholder="发表新鲜事..."></textarea>
+						    	<textarea type="input" id="text" name="text" class="mui-input-clear mui-input-speech" placeholder="说点什么..."></textarea>
 						    </div>
 						</form>
-						<!--照片域-->
-						<div id="rrr"></div>
+						
+						
+						<div id="picShow"></div>-->
+						<div class="Main">
+						    <div class="Input_Box">
+						      	<textarea class="Input_text" id="text" placeholder="说点什么..."></textarea>
+							      <div class="faceDiv"> </div>
+							</div>
+						</div>
+							    
 	                </div>
 	            </div>
 	            
@@ -71,18 +81,19 @@
 	        </div>
 	    </div>
 	    
+	<script src="js/jquery-2.2.3.min.js"></script>
 	<script src="js/mui.min.js"></script>
+	<script src="js/face.js"></script>
 	<script src="js/upphoto.js"></script>
 	<script type="text/javascript" charset="utf-8">
 		mui.init();
-
-			//文本域限字数
+		//表情包
+		//文本域限字数
 		document.getElementById('text').onkeydown = function() 
 		{    
-		    if(this.value.length >= 40) 
+		    if(this.value.length >= 140) 
 		      event.returnValue = false; 
 		} 
-		
   </script>
 </body>
 </html>

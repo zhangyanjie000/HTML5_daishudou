@@ -91,26 +91,26 @@
             mainImage.src = imgPath; 
             mainImage.style.width = "60px"; 
             mainImage.style.height = "60px"; 
- 
+   
             var image = new Image(); 
             image.src = imgPath; 
             image.onload = function() { 
                 var imgData = getBase64Image(image); 
                 /*在这里调用上传接口*/ 
-//              mui.ajax("图片上传接口", { 
+                mui.ajax("图片上传接口", { 
 //                  data: { 
-//                       
+//                      username:               
 //                  }, 
-//                  dataType: 'json', 
-//                  type: 'post', 
-//                  timeout: 10000, 
-//                  success: function(data) { 
-//                      console.log('上传成功'); 
-//                  }, 
-//                  error: function(xhr, type, errorThrown) { 
-//                      mui.toast('网络异常，请稍后再试！'); 
-//                  } 
-//              }); 
+                    dataType: 'json', 
+                    type: 'post', 
+                    timeout: 10000, 
+                    success: function(data) { 
+                        console.log('上传成功'); 
+                    }, 
+                    error: function(xhr, type, errorThrown) { 
+                        mui.toast('网络异常，请稍后再试！'); 
+                    } 
+                }); 
             } 
     } 
     //将图片压缩转成base64 
@@ -134,6 +134,6 @@
             canvas.height = height; /*设置新的图片的长度*/ 
             var ctx = canvas.getContext("2d"); 
             ctx.drawImage(img, 0, 0, width, height); /*绘图*/ 
-            var dataURL = canvas.toDataURL("image/png", 0.8); 
-            return dataURL.replace("data:image/png;base64,", ""); 
+            var dataURL = canvas.toDataURL("images/png", 0.8); 
+            return dataURL.replace("data:images/png;base64,", ""); 
         }  
