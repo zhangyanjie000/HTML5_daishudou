@@ -1,0 +1,46 @@
+
+    	<div class="col-md-10 col-md-offset-2 ">
+    	  <ol class="breadcrumb">
+    	    <li><a href="__ROOT__/admin.php/Index/index">首页</a></li>
+    	    <li><a href="#">帐户管理</a></li>
+    	    <li class="active">个人信息修改</li>
+  	    </ol>
+    	  <div class="table-responsive ">
+    	    <h3>个人信息修改 <small>Personal Modify</small></h3>
+    	    <div class="list-group ">
+    	      <div class="list-group-item">
+
+
+    	        <form role="form" method="post" action="">
+
+
+              <input type="hidden" name="id" value="{$users.id}">
+
+
+    	          <div class="input-group"> <span class="input-group-addon">用<img src="__PUBLIC__/Admin/images/em.png" alt="" width="6" height="20">户<img src="__PUBLIC__/Admin/images/em.png" alt="" width="6" height="20">名：</span>
+    	            <input type="text" class="form-control" name="username" value="{$users.username}" readonly>
+  	            </div>
+    	          <div class="input-group "> <span class="input-group-addon" for="inputWarning1">真实姓名：</span>
+    	            <input type="text" class="form-control" value="{$users.name}" id="input" name="name">
+  	            </div>
+    	          <div class="input-group"> <span class="input-group-addon">手机号码：</span>
+    	            <input type="text" class="form-control" value="{$users.telphone}" name="telphone">
+  	            </div>
+    	          <div class="input-group"> <span class="input-group-addon">电子邮箱：</span>
+    	            <input type="text" class="form-control" value="{$users.email}" name="email">
+  	            </div>
+    	          <div class="input-group"> <span class="input-group-addon">注册时间：</span>
+    	            <input type="text" class="form-control" value="{$users.regdate}" name="regdate" readonly>
+  	            </div>
+                <input type="hidden" name="password" value="{$users.password}">
+    	          <div class="input-group">
+    	            <button type="submit" class="btn btn-primary "> &nbsp;&nbsp;保<img src="__PUBLIC__/Admin/images/em.png" alt="" width="20" height="20">存&nbsp;&nbsp;</button>
+  	            </div>
+  	          </form>
+  	        </div>
+  	      </div>
+  	    </div>
+  	  </div>
+	</div>
+        	
+	

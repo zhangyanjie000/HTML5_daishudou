@@ -1,0 +1,80 @@
+<style type="text/css">
+  .styled-select select {
+   background: transparent;
+   padding: 5px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   height: 34px;
+}
+</style>
+<script charset="utf-8" src="__PUBLIC__/Admin/js/editor/kindeditor.js"></script>
+<script charset="utf-8" src="__PUBLIC__/Admin/js/editor/lang/zh_CN.js"></script>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+</script>
+
+</head>
+
+
+    	<div class="col-md-10 col-md-offset-2 ">
+    	  <ol class="breadcrumb">
+    	    <li><a href="__ROOT__/admin.php/Index/index">首页</a></li>
+    	    <li><a href="#">文章管理</a></li>
+    	    <li class="active">编辑文章</li>
+  	    </ol>
+    	  <h3 class="down">编辑文章 <small>Article Edit</small></h3>
+    	  <div class="list-group form">
+    	    <form enctype="multipart/form-data" class="form-horizontal" role="form" action="" method="post">
+
+            <input type="hidden" name="article_id" value="{$sys_article.article_id}">
+            
+    	      <div class="list-group-item">
+    	        <label for="inputEmail3" class="col-sm-2 control-label" >文章标题</label>
+    	        <div class="col-sm-10">
+    	          <input type="input" class="form-control" id="inputEmail3" placeholder="" name="a_title" value="{$sys_article.a_title}">
+  	          </div>
+  	        </div>
+    	     
+
+           <div class="list-group-item">
+             <label for="basic" class="col-sm-2 control-label">文章类型</label>
+
+                <div class="col-sm-5">
+                <div class="styled-select">
+                  <select>
+                    <option>问答文章</option>
+                    <option>减肥推送</option>
+                    <option>启蒙教育</option>
+                  </select>
+                </div>
+
+                </div>
+            </div>
+    	    
+    	      <div class="list-group-item">
+               <label for="inputEmail3" class="col-sm-2 control-label" name="a_content">内容</label>
+    	        <div class="col-sm-10">
+    	          
+    	          <textarea id="editor_id" name="a_content" style="width:90%;height:300px;" value="{$sys_article.a_content}">
+&lt;strong&gt;{$sys_article.a_content}&lt;/strong&gt;
+</textarea>
+    	        </div>
+  	        </div>
+    	      <div class="list-group-item">
+              <div class="col-sm-offset-2 col-sm-5">
+              <div class="row">
+    	        <div class=" col-sm-5">
+    	          <button type="submit" class="btn btn-primary">修 改 文 章</button>
+  	          </div>
+              <div class=" col-sm-5">
+   	            <button type="submit" class="btn btn-warning">重 置 内 容</button>
+  	          </div>
+              </div>
+              </div>
+  	        </div>
+  	      </form>
+  	    </div>
+  	  </div>
+        	

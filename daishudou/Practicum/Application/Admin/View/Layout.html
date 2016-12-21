@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>袋鼠兜</title>
+<link rel="stylesheet" href="__PUBLIC__/Admin/css/bootstrap.css">
+<link href="__PUBLIC__/Admin/css/jquery-ui.css" rel="stylesheet">
+<link href="__PUBLIC__/Admin/css/mystyle.css" rel="stylesheet">
+<script src="__PUBLIC__/Admin/js/jquery.js"></script>    
+<script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+   
+    <span class="navbar-logo" > 袋鼠兜</span>
+   </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+    
+    <ul class="nav navbar-nav navbar-right mr">
+      <li><a href="#" class="navbar-brand"><span class="glyphicon glyphicon-star"></span>欢迎：Administrator</a></li>
+      <li><a href="#" class="navbar-brand"><span class="glyphicon glyphicon-log-out"></span>退出系统</a></li>
+    </ul>
+   
+  </div><!-- /.navbar-collapse -->
+</nav> 
+
+	<div class="row">
+    	<div class=" col-md-2 sidebar">
+           <div class="headface">
+            <img src="__PUBLIC__/Admin/images/headface.png">
+          </div>
+          <div class="niname">
+            <p>MM</p>
+          </div>
+    	  <div id="accordion">
+    	    <h3><a href="#"><span class="glyphicon glyphicon-lock"></span>账户管理<span class="glyphicon glyphicon-chevron-down"></span></a></h3>
+    	    <ul>
+    	      <li  ><a href="__ROOT__/admin.php/Users/user_list.html">系统用户管理</a></li>
+               <li  ><a href="__ROOT__/admin.php/Users/user_add.html">添加管理员</a></li>
+    	      <li ><a href="__ROOT__/admin.php/Users/user_pass.html">修改个人密码</a></li>
+    	      <li ><a href="__ROOT__/admin.php/Users/user_modi.html">修改个人信息</a></li>
+  	      </ul>
+    	    <h3><a href="#"><span class="glyphicon glyphicon-file"></span>文章管理<span class="glyphicon glyphicon-chevron-down"></span></a></h3>
+    	    <ul>
+    	      <li><a href="__ROOT__/admin.php/Article/add.html">添加文章</a></li>
+    	      <li><a href="__ROOT__/admin.php/Article/lists.html">管理文章</a></li>
+  	      </ul>
+    	    <h3><a href="#"><span class="glyphicon glyphicon-book"></span>活动管理<span class="glyphicon glyphicon-chevron-down"></span></a></h3>
+    	    <ul>
+    	      <li ><a href="__ROOT__/admin.php/Active/add.html">添加活动</a></li>
+    	      <li><a href="__ROOT__/admin.php/Active/active_list.html">活动列表</a></li>
+  	      </ul>
+    	    <h3><a href="#"><span class="glyphicon glyphicon-tags"></span>故事管理<span class="glyphicon glyphicon-chevron-down"></span></a></h3>
+    	    <ul>
+    	      <li ><a href="__ROOT__/admin.php/Story/add.html" >添加故事</a></li>
+    	      <li ><a href="__ROOT__/admin.php/Story/story_list.html">故事列表</a></li>
+  	      </ul>
+  	    </div>
+    	</div>
+      {__CONTENT__}
+        </div>
+        	
+	
+</div>
+<script src="__PUBLIC__/Admin/js/jquery-ui.js"></script>
+<script>
+$( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+</script>
+</body>
+</html>

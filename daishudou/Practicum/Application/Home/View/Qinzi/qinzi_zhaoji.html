@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="__PUBLIC__/Former/js/mui.min.js"></script>
+    <script src="__PUBLIC__/Former/js/jquery.js"></script>
+    
+    <link href="__PUBLIC__/Former/css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="__PUBLIC__/Former/css/iconfont.css"> 
+</head>
+<body>
+	<!-- 主界面菜单同时移动 -->
+	    <!-- 侧滑导航根容器 -->
+	    <div class="mui-off-canvas-wrap mui-draggable">
+	        <!-- 主页面容器 -->
+	        <div class="mui-inner-wrap">
+	            <!-- 菜单容器 -->
+	           
+	            <!-- 主页面标题 -->
+	            <header class="mui-bar mui-bar-nav">
+	                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	                <h1 class="mui-title">我要召集</h1>
+	            </header>
+	           
+	            <!-- 主页面内容容器 -->
+	            <div class="mui-content mui-scroll-wrapper">
+	                <div class="mui-scroll">
+	                    <!-- 主界面具体展示内容 -->
+	                    <div class="actcle1"style="text-align:center;padding-top:5px;">
+	                    	<img src="__PUBLIC__/Former/images/my_zhaojiling.png"style="width:100px;height:100px;">
+	                    </div>
+	                    <form class="mui-input-group" action="__APP__/home/Qinzi/upload" enctype="multipart/form-data" method="post">
+	                    <!--<input type="hidden" name="user_id">-->
+	                    	<div class="actcle2" style="text-align:center;padding-bottom: 5px;">
+		                    	<!-- <a class="" id="upphoto" onclick="fileSelect();">上传照片</a>
+				            	  <input type="file" name="image" id="doc" onchange="javascript:setImagePreview();" style="display:none;"  multiple> -->
+		                    	
+		                    </div>
+						    <div class="mui-input-row">
+						        <label>标题：</label>
+						    <input type="text" class="mui-input-clear" name="e_title" placeholder="我要召集" >
+						    </div>
+						    <div class="mui-input-row">
+						        <label>地点：</label>
+						    <input type="text" class="mui-input-clear"  placeholder="地点"  name="e_address"  >
+						    </div>
+						    <div class="mui-input-row">
+						        <label>日期：</label>
+						    <input type="text" class="mui-input-clear" placeholder="输入召集令日期"  name="e_time" >
+						    </div>
+						    <div class="mui-input-row" style="height:100px;">
+						        <label for="textarea" style="padding-top:40px ;">详细介绍：</label>
+						    	<textarea cols="40" rows="8" style="height:100%;"  name="e_details"  placeholder="详细内容">
+						    	</textarea>
+						    </div>
+						    
+						
+	                   		<div class="mui-button-row" style="margin-top: 20px;">
+						        <!--<input type="submit" class="mui-btn mui-btn-primary"  value="取消"onclick="callback1();">
+						       <button type="button" class="mui-btn mui-btn-danger" onclick="location.href='__URL__/doAdd'" id="save">保存</button>-->
+						        <input type="submit" class="mui-btn"style="background:blue;" id="save"  onclick="callback2();"value="保存">
+						    </div>
+						</form>
+	            </div>
+	       	 <div class="mui-off-canvas-backdrop"></div>
+	        </div>
+	    </div>
+
+
+
+	
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	function fileSelect() {
+        	document.getElementById("doc").click(); 
+    	}
+      	
+      	function openFind(){
+		    mui.openWindow({
+				url    : '__ROOT__/index.php/Home/Action/find',
+				id: 'find.html'
+		    });
+		}
+      	//蒙版
+        /*function showMask(){ 
+      		var mask=mui.createMask(callback1);
+      		mask.show();
+      	}*/
+      	//点击页面
+      
+      	function callback2(){ 
+      		
+            mui.toast("保存成功");
+        } 
+   
+      	(function($) {
+			$('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			});
+		})(mui);
+      	
+    </script>-->
+</body>
+</html>

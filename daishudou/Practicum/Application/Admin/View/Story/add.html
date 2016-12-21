@@ -1,0 +1,67 @@
+<script charset="utf-8" src="__PUBLIC__/Admin/js/editor/kindeditor.js"></script>
+<script charset="utf-8" src="__PUBLIC__/Admin/js/editor/lang/zh_CN.js"></script>
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#editor_id');
+        });
+</script>
+
+</head>
+
+
+      <div class="col-md-10 col-md-offset-2 ">
+        <ol class="breadcrumb">
+          <li><a href="__ROOT__/admin.php/Index/index">首页</a></li>
+          <li><a href="#">故事管理</a></li>
+          <li class="active">添加故事</li>
+        </ol>
+        <h3 class="down">添加故事 <small>Story Add</small></h3>
+        <div class="list-group form">
+          <form enctype="multipart/form-data" class="form-horizontal" role="form" action="__MODULE__/Story/doAdd" method="post">
+          <!-- <input type="hidden" name="createtime"> -->
+            <div class="list-group-item">
+              <label for="inputEmail3" class="col-sm-2 control-label" >故事标题</label>
+              <div class="col-sm-10">
+                <input type="input" class="form-control" id="inputEmail3" placeholder="" name="story_title">
+              </div>
+            </div>
+            <div class="list-group-item">
+              <label for="inputEmail3" class="col-sm-2 control-label" >故事封面</label>
+              <div class="col-sm-10">
+                <input type="file" name="story_img">
+              </div>
+            </div>
+             <div class="list-group-item">
+              <label for="inputEmail3" class="col-sm-2 control-label" >故事音频</label>
+              <div class="col-sm-10">
+                <input type="file" name="story_audio">
+              </div>
+            </div>
+          
+            <div class="list-group-item">
+               <label for="inputEmail3" class="col-sm-2 control-label" name="content">故事内容</label>
+              <div class="col-sm-10">
+                
+                <textarea id="editor_id" name="story" style="width:90%;height:300px;">
+&lt;strong&gt;HTML内容&lt;/strong&gt;
+</textarea>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="col-sm-offset-2 col-sm-5">
+              <div class="row">
+              <div class=" col-sm-5">
+                <button type="submit" class="btn btn-primary">添 加 活 动</button>
+              </div>
+              <div class=" col-sm-5">
+                <button type="submit" class="btn btn-warning">重 置 内 容</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+          
+  
+

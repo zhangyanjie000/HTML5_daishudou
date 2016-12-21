@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>my</title>
+    <script src="__PUBLIC__/Former/js/mui.min.js"></script>
+    <link href="__PUBLIC__/Former/css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="__PUBLIC__/Former/css/iconfont.css">
+	<!-- 主界面菜单同时移动 -->
+</head>
+<body>
+	    <!-- 侧滑导航根容器 -->
+	    <div class="mui-off-canvas-wrap mui-draggable">
+	        <!-- 主页面容器 -->
+	        <div class="mui-inner-wrap">
+	            <!-- 菜单容器 -->
+	            <!-- 主页面标题 -->
+	            <header class="mui-bar mui-bar-nav">
+	            	 <a  style="color:#eb6d85;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	                <h1 class="mui-title">关于我们</h1>
+	            </header>
+
+	            <!-- 主页面内容容器 -->
+	            <div class="mui-content mui-scroll-wrapper my">
+   	              <div class="mui-scroll"  style="padding-top:30px;">
+   	                  <div align="center">
+   	                  	<img src="__PUBLIC__/Former/images/logo.png" style="width:16%;height:16%;"/><br>
+   	                  	<h5>版本号1.1.0</h5>
+   	                  </div>
+   	                  <br />
+   	                  <div class="mybody">
+   	                  	<ul class="mui-table-view my_ui_top">
+						     <li class="mui-table-view-cell">
+						        <a class=" class="mui-navigate-right disabled" >
+						        	检测更新
+						        	<span style="float:right"><p>已是最新版本</p></span>
+						        </a>
+						     </li>
+						    
+						    <li class="mui-table-view-cell">
+				    		<ul class="mui-table-view"> 
+						        <li class="mui-table-view-cell mui-collapse">
+						            <a class="mui-navigate-right">去评分</a>
+						            <div class="mui-collapse-content">
+						                <!--<p>评一个分数吧!</p><br>-->
+						                <div style="padding-left: 25px;">
+											<form class="form-group">
+									                <div class="form-control mui-table-view-cell">
+									                    <label>评分</label>
+									          		<div class="icons mui-inline" style="margin-left: 6px;">
+									                        <i data-index="1" class="mui-icon mui-icon-star-filled"></i>
+									                        <i data-index="2" class="mui-icon mui-icon-star-filled"></i>
+									                        <i data-index="3" class="mui-icon mui-icon-star-filled"></i>
+									                        <i data-index="4" class="mui-icon mui-icon-star-filled"></i>
+									                        <i data-index="5" class="mui-icon mui-icon-star-filled"></i>
+									               </div>
+									        </form>
+										</div>
+						            </div>
+						        </li>
+						    </ul>	    	
+						    </li>
+						    <li class="mui-table-view-cell">
+						    	<ul class="mui-table-view"> 
+							        <li class="mui-table-view-cell mui-collapse">
+							            <a class="mui-navigate-right">常见问题</a>
+							            <div class="mui-collapse-content">
+							                <ul class="mui-table-view" style="background-color:papayawhip;">
+										    <li class="mui-table-view-cell er">豆豆可以提现吗？</li>
+										    <li class="mui-table-view-cell"><p>提现倒是不可以，不过以后购买商品事优惠是有可能的，那样也挺好的呀！</p></li>
+										    <li class="mui-table-view-cell er">据说将来有商城板块，内部人员有没有知道的呀？</li>
+										    <li class="mui-table-view-cell"><p>这是肯定的，大家敬请期待呦！</p></li>
+										</ul>
+							            </div>
+							        </li>
+    					      </ul>
+						    </li>
+						    <li class="mui-table-view-cell">
+						    	<ul class="mui-table-view"> 
+							        <li class="mui-table-view-cell mui-collapse">
+							            <a class="mui-navigate-right ">加入我们</a>
+							            <div class="mui-collapse-content" >
+											<p class="er">后端研发部 </p>
+											<p >岗位要求:<br>
+1.大专以上学历，1年以上工作经验；<br>
+2.1年以上的Python服务器端开发经验，对Python开发有浓厚的兴趣；
+</p>
+											<p class="er">客户端研发部</p>
+<p>岗位要求:<br>1、2年以上Android开发经验，精通Andriod工作机制；<br />
+2、精通Android移动终端开发技术，熟练掌握多进程、多线程开发模式；
+
+</p>											
+											<p class="er">UI设计师</p>
+<p>岗位要求:<br>1、要求大专及以上学历；<br />
+2、要求从业人员精通Photoshop、Illustrator、Flash等图形软件，html、Dreamweaver等网页制作工具，能够独立完成静态网页设计工作；
+
+</p>											
+							            </div>
+							        </li>
+							    </ul>    
+						    </li>
+						    <li class="mui-table-view-cell">
+						       <a class="mui-navigate-right" id="FanKui">反馈</a>
+						    </li>
+						    <li class="mui-table-view-cell">
+						       <a class="mui-navigate-right">自动下载袋鼠兜安装包
+						       <span style="float:right"><p>仅WiFi网络</p></span>
+						       </a>
+						    </li>							    
+						</ul>
+   	                 </div> 
+   	              </div>
+	            </div>
+	       	 <div class="mui-off-canvas-backdrop"></div>
+	        </div>
+	    </div>
+	
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	<!--星星评分-->
+      	mui('.icons').on('tap','i',function(){
+          var index = parseInt(this.getAttribute("data-index"));
+          var parent = this.parentNode;
+          var children = parent.children;
+          if(this.classList.contains("mui-icon-star")){    //点击的那个之前如果由空心的星星变成实心的
+              for(var i=0;i<index;i++){
+                  children[i].classList.remove('mui-icon-star');   //star是空心的星星
+                  children[i].classList.add('mui-icon-star-filled');  //filled是实心的黄色星星
+              }
+          }else{
+              for (var i = index; i < 5; i++) {  //点击的那个之后由实心的星星变成空心的
+                  children[i].classList.add('mui-icon-star')
+                  children[i].classList.remove('mui-icon-star-filled')
+              }
+          }
+		  //打了几颗星呢
+		  console.log(index);
+		});
+      	mui('.mui-scroll-wrapper').scroll({
+	deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+});
+document.getElementById("FanKui").addEventListener('tap',function(){
+		    mui.openWindow({
+			url    : '__ROOT__/index.php/Home/Myaboutwe/fankui',
+			id    :'fankui.html'
+		    });
+})
+    </script>
+</body>
+</html>

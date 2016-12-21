@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="__PUBLIC__/Former/uploadify/uploadify.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="__PUBLIC__/Former/js/jquery.1.7.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Former/uploadify/jquery.uploadify.min.js"></script>
+</head>
+<body>
+<input type="file" name="file_upload" id="file_upload" />
+</body>
+<script type="text/javascript">
+var img_id_upload=new Array();//初始化数组，存储已经上传的图片名
+var i=0;//初始化数组下标
+$(function() {
+    $("#file_upload").uploadify({
+        "height"          : 30,
+        "swf"             : "/Public/Former/uploadify/uploadify.swf",
+        "fileObjName"     : "download",
+        "buttonText"      : "上传图片",
+         "method"         : "post",//方法，服务端可以用$_POST数组获取数据
+        "uploader"        : "{:U('Index/testImg',array('session_id'=>session_id()))}",
+        "width"           : 120,
+        'removeTimeout'      : 1,
+        'fileTypeExts'      : '*.jpg; *.png; *.gif;',
+        "onUploadSuccess" : uploadPicture
+     });
+    //可以根据自己的要求来做相应处理
+    function uploadPicture(file, data){
+        var data = $.parseJSON(data);
+        var src = '';
+        if(data.status){
+            alert(data.info);    
+        } else {
+            alert(data.info);
+        }
+    }    
+});
+</script>
+</html>
