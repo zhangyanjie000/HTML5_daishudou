@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="__PUBLIC__/Former/css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="__PUBLIC__/Former/css/iconfont.css"> 
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!--主要样式-->
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Former/css/style.css" />
+	<style type="text/css">
+		textarea{
+			height: 200px;
+			width:100%;
+			font-size: 16px;
+			line-height: 18px;
+		}
+	</style>
+</head>
+<body>
+
+	        <!-- 主页面容器 -->
+	        <div class="mui-inner-wrap">
+	            <!-- 主页面标题 -->
+	            <header class="mui-bar mui-bar-nav">
+	                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	                <h1 class="mui-title">反馈</h1>
+	                <button type="button" class="mui-btn mui-pull-right" id="send">发送</button>
+	            </header>
+	            <!-- 主页面内容容器 -->
+	            <div class="mui-content mui-scroll-wrapper">
+	                <div class="mui-scroll">
+	                    <!-- 主界面具体展示内容 -->
+	                    <!--文本域-->
+	                   <form id="input_text">
+						    <div>
+						        <label class="mui-hidden">文本域</label>
+						    	<textarea id="text" class="mui-input-clear mui-input-speech" placeholder="您有什么意见和建议..."></textarea>
+						    </div>
+						</form>
+						<!--照片域-->
+						
+	                </div>
+	            </div>
+	            
+	            
+	        </div>
+	    </div>
+	    
+	<script src="__PUBLIC__/Former/js/mui.min.js"></script>
+	<script src="__PUBLIC__/Former/js/upphoto.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+
+			//文本域限字数
+		document.getElementById('text').onkeydown = function() 
+		{    
+		    if(this.value.length >= 40) 
+		      event.returnValue = false; 
+		} 
+		
+  </script>
+</body>
+</html>
